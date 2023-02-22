@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 import { AppRootState } from "../../redux/store";
 import { setNews } from "../../redux/reducers/authSliceReducer";
