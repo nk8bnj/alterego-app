@@ -17,6 +17,7 @@ export interface INews {
 const News = () => {
   const dispatch = useDispatch<AppDispatch>();
   const news = useSelector((state: AppRootState) => state.auth.news);
+  const error = useSelector((state: AppRootState) => state.auth.error);
   const [selectedPage, setSelectedPage] = useState(1);
   const [t] = useTranslation();
 
@@ -55,7 +56,7 @@ const News = () => {
 
   return (
     <div>
-      {allNews}
+      {error ? <div className={styles.error}>{error}</div> : allNews}
       <div className={styles.load}>
         <button className={styles.load_btn} onClick={getNextNews}>
           {t("loadMore")}
