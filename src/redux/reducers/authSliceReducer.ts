@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import axios from "axios";
 
 import { INews } from "../../pages/News/News";
+import { AppDispatch } from "../store";
 
 interface authType {
   news: INews[];
@@ -34,3 +36,10 @@ export const authSliceReducer = authSlice.reducer;
 
 export const { setNews, setUsernameRedux, setPasswordRedux } =
   authSlice.actions;
+
+export const fetchNews = () => async (dispatch: AppDispatch) => {
+  const response = await axios.get(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  dispatch(setNews(response.data));
+};

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
 
-import { AppRootState } from "../../redux/store";
-import { setNews } from "../../redux/reducers/authSliceReducer";
+import { AppRootState, AppDispatch } from "../../redux/store";
+import { setNews, fetchNews } from "../../redux/reducers/authSliceReducer";
 
 import styles from "./News.module.scss";
 
@@ -16,19 +15,13 @@ export interface INews {
 }
 
 const News = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const news = useSelector((state: AppRootState) => state.auth.news);
   const [selectedPage, setSelectedPage] = useState(1);
   const [t] = useTranslation();
 
   useEffect(() => {
-    async function fetchNews() {
-      const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      dispatch(setNews(response.data));
-    }
-    fetchNews();
+    dispatch(fetchNews());
   }, []);
 
   const getNextNews = () => {
