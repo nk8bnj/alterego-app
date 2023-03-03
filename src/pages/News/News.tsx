@@ -16,8 +16,10 @@ export interface INews {
 
 const News = () => {
   const dispatch = useDispatch<AppDispatch>();
+
   const news = useSelector((state: AppRootState) => state.auth.news);
   const error = useSelector((state: AppRootState) => state.auth.error);
+
   const [selectedPage, setSelectedPage] = useState(1);
   const [t] = useTranslation();
 
