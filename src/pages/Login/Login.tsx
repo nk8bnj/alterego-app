@@ -39,7 +39,7 @@ const Login = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (username === "admin" && password === "password") {
+    if (username === "admin" && password === "admin") {
       setError(false);
       setAuth(true);
       dispatch(setUsernameRedux(username));
@@ -89,6 +89,7 @@ const Login = () => {
       <button className={styles.btn} type="submit">
         {t("submit")}
       </button>
+      <div className={styles.clue}>Username: admin, Password: admin</div>
     </form>
   );
 };

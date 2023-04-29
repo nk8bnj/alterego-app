@@ -7,7 +7,7 @@ const Profile = () => {
   const username = useSelector((state: AppRootState) => state.auth.username);
   const password = useSelector((state: AppRootState) => state.auth.password);
   const auth = () =>
-    username === "admin" && password === "password" ? true : false;
+    username === "admin" && password === "admin" ? true : false;
 
   if (!auth()) {
     return <Navigate to="/login" />;
