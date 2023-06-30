@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/alterego-app/static/css/main.cf07d8cb.css",
-    "main.js": "/alterego-app/static/js/main.2f25015b.js",
+    "main.js": "/alterego-app/static/js/main.a7bc6097.js",
     "static/js/787.c046646e.chunk.js": "/alterego-app/static/js/787.c046646e.chunk.js",
     "index.html": "/alterego-app/index.html",
     "main.cf07d8cb.css.map": "/alterego-app/static/css/main.cf07d8cb.css.map",
-    "main.2f25015b.js.map": "/alterego-app/static/js/main.2f25015b.js.map",
+    "main.a7bc6097.js.map": "/alterego-app/static/js/main.a7bc6097.js.map",
     "787.c046646e.chunk.js.map": "/alterego-app/static/js/787.c046646e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf07d8cb.css",
-    "static/js/main.2f25015b.js"
+    "static/js/main.a7bc6097.js"
   ]
 }
