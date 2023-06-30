@@ -11,6 +11,7 @@ import {
 import styles from "./Login.module.scss";
 
 const Login = () => {
+  console.log("Render");
   const dispatch = useDispatch();
   const [auth, setAuth] = useState(false);
   const [error, setError] = useState(false);
