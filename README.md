@@ -1,1 +1,1 @@
-## Alterego test application [live preview](https://8bitnikita.github.io/alterego-app/).
+Alterego Test application [Live Preview](https://nk8bnj.github.io/alterego-app/).
